@@ -1,6 +1,6 @@
 <?php
 /**
- * Obrero - an improved PHP 5 mysqli wrapper class for CSCI 322. 
+ * Obrero - An improved PHP 5 mysqli wrapper class for CSCI 322. 
  *
  * @author      Francisco Mateo <hello@mateo.io>
  * @copyright   2015 Francisco Mateo
@@ -30,6 +30,28 @@
  */
 namespace Obrero;
 
+/**
+ * Obrero Class
+ * 
+ * This class implements the singleton pattern using a static variable and
+ * the static creation method getInstance().
+
+ * Obrero reimplements many of the functions found in professors Knautz's connection
+ * class using the MySQLi API. Many of the functions have been either renamed to a
+ * more "standard" (Java) naming covention or their prefixed "_" underscore has been
+ * dropped.
+
+ * The user must edit the $config array variable with the appropiate credentials.
+ * For example:
+ *
+ *     $config = [
+ *         'host' => '127.0.0.1',
+ *         'username' => 'root',
+ *         'passwd' => 'passwd',
+ *         'dbname' => 'volga'
+ *     ];
+ *
+ */
 class Obrero
 {
     /**
@@ -38,10 +60,10 @@ class Obrero
      * @var array
      */
     private $config = [
-        'host' => '127.0.0.1',
-        'username' => 'root',
-        'passwd' => '',
-        'dbname' => ''
+        'host' => null,
+        'username' => null,
+        'passwd' => null,
+        'dbname' => null
     ];
 
     /**
@@ -57,6 +79,13 @@ class Obrero
      * @var string
      */
     private $errorMessage;
+
+    /**
+     * The last successful operation message.
+     *
+     * @var string
+     */
+    private $successMessage;    
 
     /**
      * The result set from a query.
