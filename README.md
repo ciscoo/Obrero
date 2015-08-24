@@ -9,7 +9,7 @@ This class aims to replace the original with a more modern one. This databse con
 Ensure you have at minimum PHP 5.4.0. In theory, it should work like so:
 
 ```php
-$connection = Obrero::getInstace();
+$connection = Obrero::getInstance();
 $connection->connect(); // returns true on success
 ```
 
