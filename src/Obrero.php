@@ -35,12 +35,12 @@ namespace Obrero;
  * 
  * This class implements the singleton pattern using a static variable and
  * the static creation method getInstance().
-
+ *
  * Obrero reimplements many of the functions found in professors Knautz's connection
  * class using the MySQLi API. Many of the functions have been either renamed to a
  * more "standard" (Java) naming covention or their prefixed "_" underscore has been
  * dropped.
-
+ *
  * The user must edit the $config array variable with the appropiate credentials.
  * For example:
  *
