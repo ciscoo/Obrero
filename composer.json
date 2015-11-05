@@ -1,0 +1,12 @@
+{
+    "name": "uwp/obrero",
+    "description": "Simple wrapper for MySQL. For use with Knautz's Volga assignment.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ciscoo",
+            "email": "cisco@mateo.io"
+        }
+    ],
+    "require": {}
+}
